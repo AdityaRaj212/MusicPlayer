@@ -1,0 +1,42 @@
+<!-- Add this CSS link for font-awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-TcVZ5wyNn8/et13Mz3L2tMuHKGUZ5dDl5Mj6JNBKdScblYp2mtfb8QJ7Xq9ubXpUd6o1z4+IDuT6bsDAXLOWeQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- ... (existing code) -->
+
+<div id="songSearch">
+    <div class="search-container">
+        <input type="text" id="songNameSearch" class="search" placeholder="Search a song" onkeyup="searchSong()">
+        <button class="clear-btn" onclick="clearSearch()">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+</div>
+
+<!-- ... (existing code) -->
+
+<div id="allPlaylists">
+
+    <!-- ... (existing code) -->
+
+    <div id="playlist" class="container">
+        <div class="heading">Current Playlist</div>
+        <div id="currPlaylist"></div>
+        <div class="heading">All Playlists</div>
+        <div id="playlistSearch">
+            <div class="search-container">
+                <input type="text" id="playlistNameSearch" class="search" placeholder="Search a playlist" onkeyup="searchPlaylist()">
+                <button class="clear-btn" onclick="clearPlaylistSearch()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <div id="allPlaylists">
+
+            <!-- ... (existing code) -->
+
+        </div>
+    </div>
+
+    <!-- ... (existing code) -->
+
+</div>

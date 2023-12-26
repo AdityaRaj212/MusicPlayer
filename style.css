@@ -1,0 +1,448 @@
+body{
+    background-color: rgb(232,231,230);
+}
+
+.container{
+    border-radius: 10px;
+}
+
+/* toggle switch */
+.switch {
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 30px;
+    padding: 3px;
+    margin: 0 10px 10px 0;
+    background: linear-gradient(to bottom, #eeeeee, #FFFFFF 25px);
+    background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 25px);
+    border-radius: 18px;
+    box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+  }
+  .switch-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  .switch-label {
+    position: relative;
+    display: block;
+    height: inherit;
+    font-size: 10px;
+    text-transform: uppercase;
+    background: #eceeef;
+    border-radius: inherit;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+  }
+  .switch-label:before, .switch-label:after {
+    position: absolute;
+    top: 50%;
+    margin-top: -.5em;
+    line-height: 1;
+    -webkit-transition: inherit;
+    -moz-transition: inherit;
+    -o-transition: inherit;
+    transition: inherit;
+  }
+  .switch-label:before {
+    content: attr(data-off);
+    right: 11px;
+    color: #aaaaaa;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+  }
+  .switch-label:after {
+    content: attr(data-on);
+    left: 11px;
+    color: #FFFFFF;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+  }
+  .switch-input:checked ~ .switch-label {
+       background: #E1B42B;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+  }
+  .switch-input:checked ~ .switch-label:before {
+    opacity: 0;
+  }
+  .switch-input:checked ~ .switch-label:after {
+    opacity: 1;
+  }
+  .switch-handle {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(to bottom, #FFFFFF 40%, #f0f0f0);
+    background-image: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);
+    border-radius: 100%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  }
+  .switch-handle:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -6px 0 0 -6px;
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(to bottom, #eeeeee, #FFFFFF);
+    background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF);
+    border-radius: 6px;
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+  }
+  .switch-input:checked ~ .switch-handle {
+    left: 74px;
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+  }
+  /* Transition
+      ========================== */
+  .switch-label, .switch-handle {
+    transition: All 3s ease;
+    -webkit-transition: All 0.3s ease;
+    -moz-transition: All 0.3s ease;
+    -o-transition: All 0.3s ease;
+  }
+
+  .switch{
+    position: relative;
+    right: 0px;
+  }
+
+#displayMode{
+    display: flex;
+    flex-direction: row-reverse;
+    /* border: 2px solid red; */
+    width: 100%;
+}
+
+#header{
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 3%;
+    /* border: 2px solid red; */
+    width: 100%;
+}
+
+#secondContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    /* height: 85vh; */
+    width: 100%;
+}
+
+#leftCol{
+    background-color: rgb(106,183,222);
+    /* border: 2px solid green; */
+    width: 25%;
+}
+
+#filter{
+    margin: 5%;
+    height: 20%;
+    font-size: 25px;
+}
+
+#genre{
+    background-color: rgb(62,112,138);
+}
+
+#genre option{
+    background-color: rgb(25,144,203);
+}
+
+.heading{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 5%;
+}
+
+#songs{
+    /* border: 2px solid lightblue; */
+    display: flex;
+    flex-direction: column;
+}
+
+#songSearch{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2%;
+}
+
+.search{
+    border-radius: 10px;
+    border: none;
+}
+
+.search:focus{
+    outline: none;
+}
+
+.buttons{
+    background-color: rgb(11,124,181);
+    color: white;
+    margin: 3%;
+    padding: 2%;
+    height: 10%;
+    font-size: 20px;
+    text-align: left;
+    border: none;
+    border-radius: 5px;
+}
+
+.buttons:hover{
+    background-color: aqua;
+    color: black;
+}
+
+#midCol{
+    width: 36%;
+    background-color: rgb(106,183,222);
+    /* border: 2px solid green; */
+    box-sizing: border-box;
+    box-shadow: -5px -5px 5px 0px rgb(138,118,170);
+}
+
+#songInfo{  
+    /* border: 2px solid lightblue; */
+    background-color: rgb(3,114,170);
+    margin: auto;
+    margin-top: 5%;
+    width: 90%;
+    aspect-ratio: 1/1;
+    max-height: 60%;
+    box-shadow: -5px -5px 5px 0px rgb(124,108,164);
+}
+
+#songInfo p{
+    margin: 0;
+}
+
+#songInfo:hover{
+    color: white;
+}
+
+#songImg{
+    margin: 5% 5% 5% 5%;
+    padding: 5%;
+    height: 70%;
+}
+
+#songImg img{
+    
+    height: 100%;
+    object-fit: contain;
+}
+
+#songName{
+    margin: 2% 5% 0 5%;
+}
+
+#artistName{
+    margin: 2% 5% 2% 5%;
+}
+
+#artistName p{
+    margin-bottom: 20%;
+}
+
+#songPlayer{
+    /* border: 2px solid orange; */
+    margin: auto;
+    margin-top: 5%;
+    min-width: 200px;
+    width: 50%;
+}
+
+#songPlayer audio{
+    width: 100%;
+}
+
+#songControls{
+    width: 100%;
+}
+
+#btn1{
+    /* border: 2px solid red; */
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+#btn2{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width:80%;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+
+.songBtn{
+    background-color:  rgb(148,110,250);
+    color: white;
+    width: 48%;
+}
+
+#rightCol{
+    /* border: 2px solid green; */
+    width: 30%;
+}
+
+#search{
+    /* border: 2px solid lightblue; */
+    display: flex;
+    flex-direction: row;
+    /* height: 20%; */
+}
+
+#playlistName{
+    width: 80%;
+    margin: 1%;
+    border-radius: 10px;
+}
+
+#save{
+    margin: 1%;
+}
+
+#playlist{
+    min-height: 80%;
+    width: 80%;
+    margin-top: 5%;
+    background-color: rgb(106,183,222);
+    /* border: 2px solid lightblue; */
+    box-shadow: -5px -5px 5px 0px rgb(138,118,170);
+}
+
+#playlistSearch{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 3%;
+}
+.dynamicSongBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: 3%;
+    background-color: rgb(11,124,181);
+    border-radius: 10px;
+
+}
+.removeBtn{
+    width:37px;
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+.dynamicSongBtn:hover{
+    .removeBtn{
+        visibility: visible;
+        background-color: rgb(254, 225, 0);
+    }
+}
+
+#currPlaylist{
+    display: flex;
+    flex-direction: column;
+}
+
+#allPlaylists{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.darkTheme{
+    background-color: rgb(86,86,86);
+    color: white;
+    #leftCol{
+        background-color: rgb(38,50,56);
+    }
+    #midCol{
+        background-color: rgb(38,50,56);
+        box-shadow: -5px -5px 5px 0px rgb(110,110,110);
+    }
+    #songInfo{
+        background-color: rgb(100,105,108);
+        box-shadow: -5px -5px 5px 0px rgb(110,110,110);
+        color: black;
+    }
+    #playlist{
+        background-color: rgb(38,50,56);
+        box-shadow: -5px -5px 5px 0px rgb(110,110,110);
+    }
+    #playlistName{
+        background-color: rgb(100,105,108);
+        color: white;
+    }
+    #playlistName::placeholder{
+        color:white;
+    }
+    .buttons{
+        background-color: rgb(100,105,109);
+    }
+    .buttons:hover{
+        color:#f2ff00;
+    }
+    .dynamicSongBtn{
+        background-color: rgb(100,105,109);
+    }
+}
+
+/* Add hover effect for buttons */
+.buttons:hover {
+    background-color: #1e90ff; /* Adjust the color as needed */
+    color: #fff;
+}
+
+/* Add transition for smoother effects */
+.buttons,
+.removeBtn,
+.clear-btn {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Add styles for the clear button */
+.clear-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Add styles for visual feedback in search input */
+.search-container {
+    position: relative;
+}
+
+.search-container .clear-btn {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    display: none;
+}
+
+/* Show clear button when there is input in search */
+.search-container input:valid + .clear-btn {
+    display: block;
+}
+
+/* Add dark mode transition */
+body {
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* ... (existing code) */
+
+

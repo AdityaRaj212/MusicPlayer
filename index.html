@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel = "stylesheet" href = "style.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/bf1b2804c7.js" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+</head>
+<body>
+    <div id = "container">
+
+        <div id = "displayMode">
+            <label class="switch">
+                <input class="switch-input" type="checkbox" />
+                <span class="switch-label" data-on="Light" data-off="Dark"></span> <span class="switch-handle"></span> 
+            </label>
+        </div>
+
+        <div id = "header">Music Player</div>
+
+        <div id = "secondContainer" class = "container">
+
+            <div id = "leftCol" class = "container">
+                <div id = "filter">
+                    Filter by genre: 
+                    <select name="genre" id="genre">
+        
+                    </select>
+                </div>
+                <div class = "heading">All Songs</div>
+                <div id = "songSearch">
+                    <!-- <input type="text" id = "songNameSearch" class = 'search' placeholder="Search a song" onkeyup="searchSong()"> -->
+                    <div class="search-container">
+                        <input type="text" id="songNameSearch" class="search" placeholder="Search a song" onkeyup="searchSong()">
+                        <button class="clear-btn" onclick="clearSearch()">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id = "songs"></div>
+            </div>
+
+            <div id = "midCol" class = "container">
+                <div id = "songInfo" class = "container">
+                    <div id = "songImg"></div>
+                    <div id = "songName"></div>
+                    <div id = "artistName"></div>
+                </div>    
+                <div id = "songControls">
+                    <div id = "songPlayer">
+                        <audio src="" id = "player" controls></audio>
+                    </div>
+                    <div id = "btn1">
+                        <button id = "prevSong" class = "songBtn">⇦</button>
+                        <button id = "nextSong" class = "songBtn">⇨</button>
+                    </div>
+                    <div id = "btn2">
+                        <button id = "addPlay" class = "songBtn">Add to Playlist</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id = "rightCol">
+                <div id = "search">
+                    <input type="text" id = "playlistName" class = 'search' placeholder="Enter playlist name">
+                    <button id = "save" class = "songBtn" type="submit">Create Playlist</button>
+                </div>
+                <!-- <div id = "playlist" class = "container">
+                    <div  class = "heading">Current Playlist</div>
+                    <div id = "currPlaylist"></div>
+                    <div class = "heading">All Playlists</div>
+                    <div id = "playlistSearch">
+                        <input type="text" id = "playlistNameSearch" class = 'search' placeholder="Search a playlist" onkeyup="searchPlaylist()">
+                    </div>
+                    <div id = "allPlaylists">
+                        
+                    </div>
+            </div> -->
+            <div id="playlist" class="container">
+                <div class="heading">Current Playlist</div>
+                <div id="currPlaylist"></div>
+                <div class="heading">All Playlists</div>
+                <div id="playlistSearch">
+                    <div class="search-container">
+                        <input type="text" id="playlistNameSearch" class="search" placeholder="Search a playlist" onkeyup="searchPlaylist()">
+                        <button class="clear-btn" onclick="clearPlaylistSearch()">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="allPlaylists">
+        
+                    <!-- ... (existing code) -->
+        
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src = "player.js"></script>
+    <script src="https://kit.fontawesome.com/bf1b2804c7.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+/* Add these styles at the end of your existing CSS */
+
+/* Add hover effect for buttons */
+.buttons:hover {
+    background-color: #1e90ff; /* Adjust the color as needed */
+    color: #fff;
+}
+
+/* Add transition for smoother effects */
+.buttons,
+.removeBtn,
+.clear-btn {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Add styles for the clear button */
+.clear-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Add styles for visual feedback in search input */
+.search-container {
+    position: relative;
+}
+
+.search-container .clear-btn {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    display: none;
+}
+
+/* Show clear button when there is input in search */
+.search-container input:valid + .clear-btn {
+    display: block;
+}
+
+/* Add dark mode transition */
+body {
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* ... (existing code) */
